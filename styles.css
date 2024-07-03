@@ -1,0 +1,164 @@
+/* styles.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0 0 20px;
+    color: #333;
+}
+
+.mode-selection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mode-selection button,
+#restart {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.mode-selection button:hover,
+#restart:hover {
+    background-color: #0056b3;
+}
+
+#difficulty-selection {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#difficulty-selection.hidden {
+    display: none;
+}
+
+#easy {
+    background-color: #28a745; /* Green */
+}
+
+#medium {
+    background-color: #ffc107; /* Orange */
+}
+
+#hard {
+    background-color: #dc3545; /* Red */
+}
+
+#easy:hover {
+    background-color: #218838;
+}
+
+#medium:hover {
+    background-color: #e0a800;
+}
+
+#hard:hover {
+    background-color: #c82333;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.cell {
+    background-color: #fff;
+    border: 2px solid #007BFF;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #f1f1f1;
+}
+
+.status {
+    margin: 20px 0;
+}
+
+#status-message {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.celebrate {
+    animation: celebrate 1s infinite alternate;
+}
+
+@keyframes celebrate {
+    from {
+        background-color: #007BFF;
+        color: white;
+    }
+    to {
+        background-color: #ffdf00;
+        color: black;
+    }
+}
+
+@media (max-width: 600px) {
+    .game-board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .cell {
+        font-size: 1.5em;
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    animation: fall 2s infinite;
+    top: -10px; /* Start from above the screen */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(360deg); /* Start position */
+        opacity: 0.8; /* Start opacity */
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* End position (bottom of screen) */
+        opacity: 0; /* Fade out */
+    }
+}
+
