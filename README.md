@@ -1,7 +1,13 @@
 # 🎮 Tic-Tac-Toe Web Game  
 
 A fully interactive web-based **Tic-Tac-Toe** game built with **HTML, CSS, and JavaScript**.  
-The game supports multiple modes, AI opponents with different difficulty levels, and fun animations for wins and draws.  
+The game supports multiple modes, AI opponents with different difficulty levels, and fun animations for wins and draws. 
+
+---
+
+## 🔗 Live Demo  
+
+👉 [Play Tic-Tac-Toe Online](https://fardaustaohyd.github.io/Tic-Tac-Toe-with-AI/) 
 
 ---
 
